@@ -10,7 +10,7 @@ export default (props: Props) => {
     return (
         <div className = "navbar">
             <div className = "nav_1">
-                <h2>Not so SkillShare</h2>
+                <h2>SkillShare</h2>
                 <p>Browse</p>
                 <p>Workshops</p>
                 <div className = "input_box">

@@ -3,15 +3,15 @@ a{
     text-decoration: none;
 }
 .course-card{
-    height: 425px;
-    font-size: 20px;
+    height: 300px;
+    font-size: 17px;
     color: black;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    width: 275px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 8px 0px rgba(117,117,117,1);
+    box-shadow: 0px 0px 2px 0px rgba(117,117,117,1);
 }
 .course-content{
     height: 100%;
@@ -26,15 +26,16 @@ a{
     justify-content: space-between;
 }
 .course-card img{
-    max-width: 400px;
+    width: 100%;
+    max-height: 50%;
     z-index: -1;
 }
 .course-title{
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.05em;
+    margin-bottom: 10px;
 }
 .separe_1{
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .bookmark{
     font-size: 35px !important;
@@ -43,6 +44,5 @@ a{
     color: #3722d3;
 }
 .separe_2{
-    margin-top: 25px;
-    margin-bottom: 5px;
+    margin-top: 5px;
 }

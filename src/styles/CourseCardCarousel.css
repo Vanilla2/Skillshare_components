@@ -1,0 +1,23 @@
+.card-carousel {
+    display: flex;
+}
+.card-carousel-window{
+    display: flex;
+    padding: 5px;
+    /* margin: 0 auto; */
+    overflow: hidden;
+
+}
+.card-carousel-content{
+    width: 1180px ;
+    display: flex;
+    transition: 1s transform;
+    box-sizing: content-box !important;
+}
+.card-carousel-item{
+    margin: 0 10px;
+}
+.card-carousel-arrow{
+    align-self: center; 
+    z-index: 10;
+}
