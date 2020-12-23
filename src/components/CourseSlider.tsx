@@ -50,8 +50,8 @@ const CourseSlider = ({data}: Props) => {
             {data.map((x, index) => (
                 <div className = {`banner ${index === selected ? "active": "inactive"}`} style = {{backgroundImage: `url(${x.link})`}}/>
             ))}
-            {data.filter((x, index) => index === selected).map((x, index) => (
-                <div className="content">
+            {data.map((x, index) => (
+                <div className={`content ${index === selected ? "active": "inactive"}`}>
                     <p className="title">
                         {x.title}
                     </p>
@@ -63,13 +63,13 @@ const CourseSlider = ({data}: Props) => {
             <div className="gradient"/>
             <div className="slider">
                 <IconButton onClick = {previous} className = "arrow-left arrow">
-                    <ArrowLeft/>
+                    <ArrowLeft style = {{marginLeft: "5px", width: "21px"}}/>
                 </IconButton>
                 {data.map((x, index) => (
                     <div className={`circle ${index === selected ? "active" : "inactive"}`}/>
                 ))}
                 <IconButton onClick = {next} className = "arrow-right arrow">
-                    <ArrowRight/>
+                    <ArrowRight style = {{fontSize: "1.42rem"}}/>
                 </IconButton>
             </div>
         </div>

@@ -7,6 +7,17 @@
     }
 }
 
+@keyframes text{
+    from{
+        opacity: 0;
+        left: 50%;
+    }
+    to{
+        opacity: 1;
+        left: 5%;
+    }
+}
+
 .course-slider {
     width: 100vw;
     height: 400px;
@@ -19,10 +30,7 @@
         background-size: cover;
     }
     .banner.active{
-        animation: appear 0.4s forwards;
-    }
-    .banner.inactive {
-        display: none;
+        animation: appear 1.5s forwards;
     }
     .gradient{
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
@@ -41,6 +49,7 @@
         max-width: 60%;
         z-index: 6;
         color: white;
+        animation: text 0.7s forwards;
         .title{
             font-size: 1em;
             font-weight: 600;
@@ -49,6 +58,9 @@
         .description{
             font-size: 0.6em;
         }
+    }
+    .inactive{
+        display:none;
     }
     .slider {
         z-index: 10;
@@ -74,6 +86,9 @@
         }
         .circle.active {
             background-color: rgb(55, 34, 211);
+        }
+        .circle.inactive {
+            display: block;
         }
     }
 }
