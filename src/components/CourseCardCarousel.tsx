@@ -26,7 +26,7 @@ const CourseCardCarousel = ({children}: Props) => {
 
     return (
         <div ref = {mainContainer} className = "card-carousel">
-            <IconButton onClick = {left} className = "card-carousel-arrow arrow-left">
+            <IconButton disabled = {counter * 4 <= 0} onClick = {left} className = "card-carousel-arrow arrow-left">
                 <ArrowLeft/>
             </IconButton>
             
@@ -39,7 +39,7 @@ const CourseCardCarousel = ({children}: Props) => {
                 ))}
                 </div>
             </div>
-            <IconButton onClick = {right} className = "card-carousel-arrow arrow-right">
+            <IconButton disabled = {counter * 4 >= children.length} onClick = {right} className = "card-carousel-arrow arrow-right">
                 <ArrowRight/>
             </IconButton>
         </div>
