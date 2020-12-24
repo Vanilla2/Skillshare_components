@@ -10,4 +10,11 @@ const cacheImages = async (src: string[]) => {
     await Promise.all(promises);
 }
 
-export {cacheImages}
+const breakpoints = {
+    mobile: 480,
+    tablet: 768,
+    smallScreen: 1024,
+    largeScreen: 1200,
+}
+
+export {cacheImages, breakpoints}

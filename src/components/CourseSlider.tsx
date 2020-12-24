@@ -16,7 +16,6 @@ export interface CourseSliderElement {
 export interface Props {
     data: CourseSliderElement[];
 }
-
 const CourseSlider = ({data}: Props) => {
     const [selected, setSelected] = useState(0);
     const [loading, setLoading] = useState(false);
@@ -51,10 +50,10 @@ const CourseSlider = ({data}: Props) => {
     return (
         <div className="course-slider">
             {data.map((x, index) => (
-                <div className = {`banner ${index === selected ? "active": "inactive"}`} style = {{backgroundImage: `url(${x.link})`}}/>
+                <div key = {x.link + index} className = {`banner ${index === selected ? "active": "inactive"}`} style = {{backgroundImage: `url(${x.link})`}}/>
             ))}
             {data.map((x, index) => (
-                <div className={`content ${index === selected ? "active": "inactive"}`}>
+                <div key = {x.title + x.description} className={`content ${index === selected ? "active": "inactive"}`}>
                     <p className="title">
                         {x.title}
                     </p>
@@ -75,7 +74,7 @@ const CourseSlider = ({data}: Props) => {
                     <ArrowLeft style = {{marginLeft: "5px", width: "21px"}}/>
                 </IconButton>
                 {data.map((x, index) => (
-                    <div className={`circle ${index === selected ? "active" : "inactive"}`}/>
+                    <div key = {index} className={`circle ${index === selected ? "active" : "inactive"}`}/>
                 ))}
                 <IconButton onClick = {next} className = "arrow-right arrow">
                     <ArrowRight style = {{fontSize: "1.42rem"}}/>
