@@ -4,13 +4,10 @@
 .card-carousel-window{
     display: flex;
     padding: 5px;
-    /* margin: 0 auto; */
-    margin: 0 10px;
     overflow: hidden;
-
 }
 .card-carousel-content{
-    width: 1180px ;
+    width: 886px;
     display: flex;
     transition: 1s transform;
     box-sizing: content-box !important;

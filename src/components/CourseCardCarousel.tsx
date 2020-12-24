@@ -13,25 +13,24 @@ const CourseCardCarousel = ({children}: Props) => {
     const [counter, setCounter] = useState(0);
 
     const left = () => {
-        if (counter * 4 <= 0)
+        if (counter * 3 <= 0)
             return;
-        setCounter(counter - 4);
+        setCounter(counter - 3);
     }
 
     const right = () => {
-        if (counter * 4 >= children.length)
+        if (counter * 3 >= children.length)
             return;
-        setCounter(counter + 4);
+        setCounter(counter + 3);
     }
 
     return (
         <div ref = {mainContainer} className = "card-carousel">
-            <IconButton disabled = {counter * 4 <= 0} onClick = {left} className = "card-carousel-arrow arrow-left">
+            <IconButton disabled = {counter * 3 <= 0} onClick = {left} className = "card-carousel-arrow arrow-left">
                 <ArrowLeft/>
             </IconButton>
-            
             <div className = "card-carousel-window">
-                <div className="card-carousel-content" style = {{transform: `translateX(${-100 / 4 * counter}%)`}}>
+                <div className="card-carousel-content" style = {{transform: `translateX(${-100 / 3 * counter}%)`}}>
                 {children.map((x: any, index: number) => (
                     <div key = {index} className="card-carousel-item">
                         {x}
@@ -39,7 +38,7 @@ const CourseCardCarousel = ({children}: Props) => {
                 ))}
                 </div>
             </div>
-            <IconButton disabled = {counter * 4 >= children.length} onClick = {right} className = "card-carousel-arrow arrow-right">
+            <IconButton disabled = {counter * 3 >= children.length} onClick = {right} className = "card-carousel-arrow arrow-right">
                 <ArrowRight/>
             </IconButton>
         </div>

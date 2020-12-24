@@ -1,5 +1,5 @@
 const cacheImages = async (src: string[]) => {
-    const promises = await src.map(x => {
+    const promises = src.map(x => {
         return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = x;

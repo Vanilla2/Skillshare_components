@@ -1,5 +1,4 @@
-@import "styles/CourseCard.scss", "styles/CourseCardCarousel.scss", "styles/CourseSlider.scss", "styles/Navbar.scss";
-
+@import "styles/_Home", "styles/_CourseCard", "styles/_CourseCardCarousel", "styles/_CourseSlider", "styles/_Navbar";
 *{
   box-sizing: border-box;
 }
@@ -22,4 +21,21 @@ p{
 }
 input:focus{
     outline: none !important;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover{
+  background: #3722d3;
+}
+body::-webkit-scrollbar-track{
+  background:white;
+  border-radius: 0px;
+  box-shadow: inset 7px 10px 12px #f0f0f0;
 }

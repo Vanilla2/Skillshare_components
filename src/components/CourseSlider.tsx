@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react'
 import {IconButton} from "@material-ui/core";
 import ArrowRight from '@material-ui/icons/ArrowForwardIos';
 import ArrowLeft from '@material-ui/icons/ArrowBackIos';
+import PlayArrow from '@material-ui/icons/PlayArrow';
 import { cacheImages } from '../utils';
+import { Link } from 'react-router-dom';
 
 export interface CourseSliderElement {
     link: string,
     title: string,
     description: string,
+    courseLink: string
 }
 
 export interface Props {
@@ -58,6 +61,12 @@ const CourseSlider = ({data}: Props) => {
                     <div className="p description">
                         {x.description}
                     </div>
+                    <Link to = {x.courseLink}>
+                        <button>
+                            <PlayArrow className = "icon"/>
+                            Watch Now
+                        </button>
+                    </Link>
                 </div> 
             ))}
             <div className="gradient"/>
