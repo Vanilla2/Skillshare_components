@@ -5,13 +5,7 @@ import ArrowLeft from '@material-ui/icons/ArrowBackIos';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import { cacheImages } from '../utils';
 import { Link } from 'react-router-dom';
-
-export interface CourseSliderElement {
-    link: string,
-    title: string,
-    description: string,
-    courseLink: string
-}
+import { CourseSliderElement } from '../interfaces';
 
 export interface Props {
     data: CourseSliderElement[];
@@ -60,7 +54,7 @@ const CourseSlider = ({data}: Props) => {
                     <div className="p description">
                         {x.description}
                     </div>
-                    <Link to = {x.courseLink}>
+                    <Link to = {`course/${x.id}`}>
                         <button>
                             <PlayArrow className = "icon"/>
                             Watch Now

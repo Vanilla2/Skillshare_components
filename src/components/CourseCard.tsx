@@ -2,17 +2,9 @@ import React, {useState} from 'react'
 import {Link} from "react-router-dom"
 import {Paper} from "@material-ui/core"
 import {BookmarkBorder as BookmarkEmpty, Bookmark as BookmarkFilled} from '@material-ui/icons';
+import { CourseCardData } from '../interfaces';
 
-export interface Props {
-    imageUrl: string,
-    duration: string,
-    title: string,
-    author: string,
-    link: string,
-    students: string
-}
-
-export default ({imageUrl, link, duration, title, author, students}: Props) => {
+export default ({imageUrl, id, duration, title, author, students}: CourseCardData) => {
     const [bookmarked, setBookmarked] = useState(false);
 
     const handleClick = () => {
@@ -20,7 +12,7 @@ export default ({imageUrl, link, duration, title, author, students}: Props) => {
     }
 
     return (
-        <Link to = {link} className = "course-card">
+        <Link to = {`/course/${id}`} className = "course-card">
             <img src = {imageUrl} className = "course-image" alt = "Not found"/>
             <div className = "course-content">
                 <div className = "separe separe_1">

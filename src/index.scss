@@ -1,4 +1,4 @@
-@import "styles/_Home", "styles/_CourseCard", "styles/_CourseCardCarousel", "styles/_CourseSlider", "styles/_Navbar";
+@import "styles/variables", "styles/Home", "styles/CourseCard", "styles/CourseCardCarousel", "styles/CourseSlider", "styles/Navbar", "styles/Footer";
 *{
   box-sizing: border-box;
 }
@@ -16,8 +16,16 @@ code {
     monospace;
 }
 
+section.main-window-container{
+  min-height: calc(100vh - #{$navbar_height} - #{$footer_height} - #{$footer_margin});
+}
+
+a {
+  text-decoration: none !important;
+}
+
 p{
-    margin: 3px;
+  margin: 3px;
 }
 input:focus{
     outline: none !important;
@@ -28,14 +36,13 @@ body::-webkit-scrollbar {
   height: 7px;
 }
 body::-webkit-scrollbar-thumb {
-  background: #a1a1a1;
-  border-radius: 10px;
+  background: $color_1;
 }
 body::-webkit-scrollbar-thumb:hover{
-  background: #3722d3;
+  background: $color_3;
 }
 body::-webkit-scrollbar-track{
-  background:white;
+  background: white;
   border-radius: 0px;
   box-shadow: inset 7px 10px 12px #f0f0f0;
 }

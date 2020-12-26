@@ -1,6 +1,6 @@
 import React from 'react'
-import CourseCard, {Props as CourseProps} from "../components/CourseCard";
-import CourseSlider, {CourseSliderElement} from '../components/CourseSlider';
+import CourseCard from "../components/CourseCard";
+import CourseSlider from '../components/CourseSlider';
 import CourseCardCarousel from "../components/CourseCardCarousel"
 import {course1, course2, courseSliderData} from "../sampleData";
 
